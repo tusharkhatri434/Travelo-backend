@@ -20,7 +20,9 @@ app.use(cors())
 app.use(express.json());
 app.use('/api',userRoutes);
 app.use('/admin',adminRoutes);
-
+app.get('/',(req,res)=>{
+  return res.status(200).send("Server is Running")
+})
 
 
 async function serverStart(){

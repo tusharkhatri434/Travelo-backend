@@ -6,7 +6,7 @@ const Hotel = require('../models/Hotel');
 route.get("/hotels",async (req,res)=>{
     try {
         const data = await Hotel.find();
-        return res.status(200).json({hotels:data});
+        return res.status(200).send({hotels:data});
     } catch (error) {
         
     }
